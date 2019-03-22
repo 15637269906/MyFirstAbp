@@ -15,14 +15,58 @@ namespace MyFirstAbp.Web.Controllers
         {
             _loginService = loginService;
         }
-
+        //查询验证
         [HttpGet]
         [Route("login")]
-        public bool Login(string name, string pwd)
+        public String Login(string name, string pwd)
         {
-            bool result = false;
+
+            string result;
             result = _loginService.Login(name, pwd);
             return result;
         }
+
+
+
+        //删除用户
+        [HttpGet]
+        [Route("delete_user")]
+        public bool delete_user(int id)
+        {
+            
+            bool result = false;
+            result = _loginService.delete_user(id);
+
+            return result;
+        }
+
+
+
+
+        //添加用户
+        [HttpGet]
+        [Route("add_user")]
+        public bool add_user(string name, string pwd)
+        {
+            bool result = false;
+            result = _loginService.add_user(name, pwd);
+            return result;
+        }
+
+
+
+
+
+        //修改用户
+        [HttpGet]
+        [Route("update_user")]
+        public string update_user(int  id, string username)
+        {
+            string end_name;
+            end_name = _loginService.update_user(id, username);
+            return end_name;
+        }
+
+
     }
 }

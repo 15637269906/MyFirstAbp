@@ -8,6 +8,13 @@ namespace MyFirstAbp.Persons
     public interface ILoginService : IApplicationService
     {
 
-        bool Login(string name, string pwd);
+        string Login(string name, string pwd);//查询
+
+        bool delete_user(int id);//删除
+
+        bool add_user(string usernmae, string password);//新增
+
+        string update_user(int id,string username);//修改
+
     }
 }
