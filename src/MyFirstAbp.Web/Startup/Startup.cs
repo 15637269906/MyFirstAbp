@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Swashbuckle.AspNetCore.Swagger;
+using System.IO;
 
 namespace MyFirstAbp.Web.Startup
 {
@@ -24,7 +26,13 @@ namespace MyFirstAbp.Web.Startup
 
             services.AddMvc(options =>
             {
-                options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+               // options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+            });
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new Info { Title = "ContentBusiness API", Version = "v1" });
+                options.IncludeXmlComments(GetXmlCommentsPath());        
             });
 
             //Configure Abp and Dependency Injection
@@ -37,28 +45,30 @@ namespace MyFirstAbp.Web.Startup
             });
         }
 
+        private static string GetXmlCommentsPath()
+        {
+            return String.Format(@"bin\SwaggerUI.xml", System.AppDomain.CurrentDomain.BaseDirectory);
+        }
+
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             app.UseAbp(); //Initializes ABP framework.
-
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-            }
-
+            
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}");
             });
+
+            app.UseSwagger();
+            // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "ContentBusiness API V1");
+            }); // URL: /swagger
         }
     }
 }

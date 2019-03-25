@@ -37,6 +37,8 @@ namespace MyFirstAbp.Web.Startup
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(typeof(MyFirstAbpWebModule).GetAssembly());
+
         }
+
     }
 }

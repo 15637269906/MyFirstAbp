@@ -10,6 +10,9 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <RootNamespace>MyFirstAbp</RootNamespace>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>E:\MyFirst\src\MyFirstAbp.Application\MyFirstAbp.Application.xml</DocumentationFile>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyFirstAbp.Core\MyFirstAbp.Core.csproj" />
   </ItemGroup>

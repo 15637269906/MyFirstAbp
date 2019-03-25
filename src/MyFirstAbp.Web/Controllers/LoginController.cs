@@ -23,13 +23,14 @@ namespace MyFirstAbp.Web.Controllers
 
             string result;
             result = _loginService.Login(name, pwd);
+
             return result;
         }
 
 
 
         //删除用户
-        [HttpGet]
+        [HttpDelete]
         [Route("delete_user")]
         public bool delete_user(int id)
         {

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyFirstAbp.Application</name>
+    </assembly>
+    <members>
+        <member name="T:MyFirstAbp.MyFirstAbpAppServiceBase">
+            <summary>
+            Derive your application services from this class.
+            </summary>
+        </member>
+        <member name="M:MyFirstAbp.Persons.LoginService.#ctor(Abp.Domain.Repositories.IRepository{MyFirstAbp.Users.User})">
+             <summary>
+            In constructor, we can get needed classes/interfaces.
+            They are sent here by dependency injection system automatically.
+             </summary>
+        </member>
+        <member name="M:MyFirstAbp.Persons.LoginService.Login(System.String,System.String)">
+            <summary>
+            登录
+            </summary>
+            <param name="name"></param>
+            <param name="pwd"></param>
+            <returns></returns>
+            
+        </member>
+    </members>
+</doc>

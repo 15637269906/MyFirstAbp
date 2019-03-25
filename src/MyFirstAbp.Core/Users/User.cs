@@ -10,6 +10,8 @@ namespace MyFirstAbp.Users
 
         public String username { set; get; }
         public String password { set; get; }
+
+        public String description { set; get; }
         public User() { }
         public User(String username,String password) {
             username = username;
