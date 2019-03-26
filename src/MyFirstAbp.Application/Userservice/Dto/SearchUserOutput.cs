@@ -8,5 +8,7 @@ namespace MyFirstAbp.Userservice.Dto
    public  class SearchUserOutput
     {
         public List<UserDto> User { get; set; }
+
+
     }
 }

@@ -1,10 +1,12 @@
 ﻿using Abp.Application.Services.Dto;
+using Abp.AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace MyFirstAbp.Userservice.Dto
 {
+    [AutoMap(typeof(Users.User))]
     public class UserDto : EntityDto
     {
         public string username { get; set; }

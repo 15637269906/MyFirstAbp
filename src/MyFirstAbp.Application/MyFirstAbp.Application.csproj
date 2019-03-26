@@ -14,6 +14,14 @@
     <DocumentationFile>E:\MyFirst\src\MyFirstAbp.Application\MyFirstAbp.Application.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="新文件夹1\**" />
+    <Compile Remove="新文件夹\**" />
+    <EmbeddedResource Remove="新文件夹1\**" />
+    <EmbeddedResource Remove="新文件夹\**" />
+    <None Remove="新文件夹1\**" />
+    <None Remove="新文件夹\**" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\MyFirstAbp.Core\MyFirstAbp.Core.csproj" />
   </ItemGroup>
   <ItemGroup>

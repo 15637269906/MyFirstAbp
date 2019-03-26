@@ -9,6 +9,8 @@ namespace MyFirstAbp.AutoMapper
         public static void Configure() {
 
 
+
+
         }
 
     }

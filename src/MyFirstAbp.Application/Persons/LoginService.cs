@@ -10,7 +10,6 @@ namespace MyFirstAbp.Persons
     public class LoginService : ApplicationService, ILoginService
     {
         private readonly IRepository<User> _taskRepository;
-
         /// <summary>
         ///In constructor, we can get needed classes/interfaces.
         ///They are sent here by dependency injection system automatically.

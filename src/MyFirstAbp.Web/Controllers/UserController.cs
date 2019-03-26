@@ -13,17 +13,21 @@ namespace MyFirstAbp.Web.Controllers
     public class UserController : MyFirstAbpControllerBase
     {
 
-        private IUsersService  _UsersService;
-        public UserController(IUsersService UsersService) {
+        private IUsersService _UsersService;
+        public UserController(IUsersService UsersService)
+        {
             _UsersService = UsersService;
         }
+        /*------------------------------查询一个用户---------------------------------------------------------------------------*/
         [HttpGet]
-        [Route("login")]
-        public string login(SearchUserInput input) {
-            SearchUserOutput  output= _UsersService.SearchUser(input);
-            var end_list = output.User;
-            return end_list.ToString();
+        [Route("searchUser")]
+        public SearchUserOutput SearchUser(SearchUserInput input)
+        {
+            SearchUserOutput output = _UsersService.SearchUser(input);
+            return output;
         }
+
+        /*------------------------------查询一个用户---------------------------------------------------------------------------*/
 
 
 
