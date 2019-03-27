@@ -1,7 +1,6 @@
 ﻿using Abp.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using MyFirstAbp.Student;
-using MyFirstAbp.Tasks;
+using MyFirstAbp.Roles;
 using MyFirstAbp.Users;
 
 namespace MyFirstAbp.EntityFrameworkCore
@@ -15,13 +14,12 @@ namespace MyFirstAbp.EntityFrameworkCore
         {
 
         }
-        public DbSet<TaskInfo> TaskInfo { get; set; }
-
-
-        public DbSet<Students> Students { get; set; }
-
+      
 
         public DbSet<User> Users { get; set; }
+
+
+        public DbSet<Role> Roles { get; set; }
 
 
     }

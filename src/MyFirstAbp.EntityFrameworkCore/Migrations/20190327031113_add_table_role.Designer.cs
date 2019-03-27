@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyFirstAbp.EntityFrameworkCore;
 
 namespace MyFirstAbp.Migrations
 {
     [DbContext(typeof(MyFirstAbpDbContext))]
-    partial class MyFirstAbpDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190327031113_add_table_role")]
+    partial class add_table_role
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

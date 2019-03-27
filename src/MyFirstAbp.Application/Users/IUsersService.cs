@@ -1,11 +1,11 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
-using MyFirstAbp.Userservice.Dto;
+using MyFirstAbp.Users.Dto;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyFirstAbp.Userservice
+namespace MyFirstAbp.Users
 {
     public  interface IUsersService : IApplicationService
     {

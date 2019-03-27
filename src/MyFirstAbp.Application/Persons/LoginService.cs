@@ -39,6 +39,10 @@ namespace MyFirstAbp.Persons
              System.Console.WriteLine(a);
              */
             var usres = _taskRepository.FirstOrDefault(o => o.username == name);
+
+            var list = _taskRepository.GetAll();
+                   
+
             if (usres != null) {
                 if (usres.password == pwd)
                 {

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyFirstAbp.Userservice.Dto
+namespace MyFirstAbp.Users.Dto
 {
     [AutoMap(typeof(Users.User))]
     public class UserDto : EntityDto

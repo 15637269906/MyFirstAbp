@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyFirstAbp.Persons;
-using MyFirstAbp.Userservice;
-using MyFirstAbp.Userservice.Dto;
+using MyFirstAbp.Users;
+using MyFirstAbp.Users.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;

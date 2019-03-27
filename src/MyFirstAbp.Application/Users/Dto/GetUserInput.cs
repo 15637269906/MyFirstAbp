@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyFirstAbp.Userservice.Dto
+namespace MyFirstAbp.Users.Dto
 {
     public class GetUserInput : PagedSortedAndFilteredInputDto
     {

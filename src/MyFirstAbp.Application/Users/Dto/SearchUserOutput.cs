@@ -1,9 +1,9 @@
-﻿using MyFirstAbp.Userservice.Dto;
+﻿using MyFirstAbp.Users.Dto;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyFirstAbp.Userservice.Dto
+namespace MyFirstAbp.Users.Dto
 {
    public  class SearchUserOutput
     {

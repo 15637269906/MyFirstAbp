@@ -45,7 +45,7 @@ namespace MyFirstAbp.Web.Controllers
 
 
         //添加用户
-        [HttpGet]
+        [HttpPost]
         [Route("add_user")]
         public bool add_user(string name, string pwd)
         {
@@ -59,7 +59,7 @@ namespace MyFirstAbp.Web.Controllers
 
 
         //修改用户
-        [HttpGet]
+        [HttpPut]
         [Route("update_user")]
         public string update_user(int  id, string username)
         {

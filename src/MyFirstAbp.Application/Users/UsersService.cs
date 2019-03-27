@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using MyFirstAbp.Userservice.Dto;
+using MyFirstAbp.Users.Dto;
 using Abp.Domain.Repositories;
 using MyFirstAbp.Users;
 using AutoMapper;
@@ -14,7 +14,7 @@ using System.Linq.Dynamic.Core;
 using Abp.AutoMapper;
 using Abp.Collections.Extensions;
 
-namespace MyFirstAbp.Userservice
+namespace MyFirstAbp.Users
 {
     public class UsersService : ApplicationService, IUsersService
     {
@@ -45,9 +45,7 @@ namespace MyFirstAbp.Userservice
             //}).ToList();
 
             var b = Mapper.Map<List<User>, List<UserDto>>(userEntityList);
-
             return new SearchUserOutput { User = b };
-
 
         }
 
@@ -67,8 +65,6 @@ namespace MyFirstAbp.Userservice
         /*----------------------------------------------------------------分页-----------------------------------------------------------------*/
         public PagedResultDto<UserDto> GetPagedUsers(GetUserInput input)
         {
-            
-
             var query = _taskRepository.GetAll();
             query = !string.IsNullOrEmpty(input.Sorting) ? query.OrderBy(input.Sorting): query.OrderByDescending(t=>t.Id);
             var tasksCount = query.Count();

@@ -14,10 +14,13 @@
     <DocumentationFile>E:\MyFirst\src\MyFirstAbp.Application\MyFirstAbp.Application.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="AutoMapper\**" />
     <Compile Remove="新文件夹1\**" />
     <Compile Remove="新文件夹\**" />
+    <EmbeddedResource Remove="AutoMapper\**" />
     <EmbeddedResource Remove="新文件夹1\**" />
     <EmbeddedResource Remove="新文件夹\**" />
+    <None Remove="AutoMapper\**" />
     <None Remove="新文件夹1\**" />
     <None Remove="新文件夹\**" />
   </ItemGroup>
