@@ -40,7 +40,7 @@ namespace MyFirstAbp.Persons
              */
             var usres = _taskRepository.FirstOrDefault(o => o.username == name);
 
-            var list = _taskRepository.GetAll();
+            //var list = _taskRepository.GetAll();
                    
 
             if (usres != null) {
