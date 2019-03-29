@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyFirstAbp.SysRoles.Dto
+namespace MyFirstAbp.CRM.SysRoles.Dto
 {
 
     [AutoMap(typeof(Pmgt.Auths.Auth))]

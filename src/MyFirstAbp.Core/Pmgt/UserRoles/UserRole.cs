@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyFirstAbp.UserRoles
+namespace MyFirstAbp.Pmgt.UserRoles
 {
     public class UserRole:Entity<int>
     {

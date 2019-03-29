@@ -6,7 +6,7 @@ using System.Text;
 namespace MyFirstAbp.Auths.Dto
 {
 
-    [AutoMap(typeof(Auths.Auth))]
+    [AutoMap(typeof(Pmgt.Auths.Auth))]
     public class GetAllAuthsDto
     {
         public int Id { set; get; }

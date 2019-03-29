@@ -9,9 +9,9 @@ using MyFirstAbp.Pmgt.SysRoles;
 using MyFirstAbp.Pmgt.RoleAuths;
 using MyFirstAbp.Pmgt.UserRoles;
 using MyFirstAbp.Pmgt.Auths;
-using MyFirstAbp.Login.Dto;
-using MyFirstAbp.Pmgt.UserInfos;
-using MyFirstAbp.Login;
+using MyFirstAbp.CRM.Login.Dto;
+
+
 
 namespace MyFirstAbp.CRM.Login
 {

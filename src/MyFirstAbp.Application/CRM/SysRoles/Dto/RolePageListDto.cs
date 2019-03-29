@@ -3,15 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyFirstAbp.SysRoles.Dto
+namespace MyFirstAbp.CRM.SysRoles.Dto
 {
 
-    [AutoMap(typeof(Pmgt.Auths.Auth))]
-    public  class AuthDto
+    [AutoMap(typeof(Pmgt.SysRoles.SysRole))]
+    public class RolePageListDto
     {
+
         public int Id { set; get; }
         public string Name { set; get; }
-        public string Code { set; get; }
-
+        public AuthDto[] Auths { set; get; }
     }
 }

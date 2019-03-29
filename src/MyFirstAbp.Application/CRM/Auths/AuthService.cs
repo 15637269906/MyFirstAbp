@@ -2,14 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using MyFirstAbp.Auths.Dto;
+using MyFirstAbp.CRM.Auths.Dto;
 using Abp.Domain.Repositories;
 using AutoMapper;
 using MyFirstAbp.Pmgt.Auths;
+using MyFirstAbp.CRM.Auths;
 using MyFirstAbp.Auths;
 
-
-namespace MyFirstAbp.Auths
+namespace MyFirstAbp.CRM.Auths
 {
     public class AuthService : ApplicationService, IAuthService
     {

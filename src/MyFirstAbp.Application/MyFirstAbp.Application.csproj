@@ -15,14 +15,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="AutoMapper\**" />
+    <Compile Remove="CRM\**" />
     <Compile Remove="新文件夹1\**" />
     <Compile Remove="新文件夹\**" />
     <EmbeddedResource Remove="AutoMapper\**" />
+    <EmbeddedResource Remove="CRM\**" />
     <EmbeddedResource Remove="新文件夹1\**" />
     <EmbeddedResource Remove="新文件夹\**" />
     <None Remove="AutoMapper\**" />
+    <None Remove="CRM\**" />
     <None Remove="新文件夹1\**" />
     <None Remove="新文件夹\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="UserInfos\Dto\GetUserInfoListOutput.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyFirstAbp.Core\MyFirstAbp.Core.csproj" />

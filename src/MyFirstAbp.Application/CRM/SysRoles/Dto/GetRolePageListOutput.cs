@@ -1,9 +1,8 @@
-﻿using MyFirstAbp.SysRoles.Dto;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyFirstAbp.SysRoles.Dto
+namespace MyFirstAbp.CRM.SysRoles.Dto
 {
    public class GetRolePageListOutput
     {

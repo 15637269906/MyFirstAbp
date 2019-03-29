@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using MyFirstAbp.SysRoles.Dto;
+using MyFirstAbp.CRM.SysRoles.Dto;
 using Abp.Domain.Repositories;
 
 using System.Linq;
@@ -13,7 +13,7 @@ using MyFirstAbp.Pmgt.Auths;
 using MyFirstAbp.Pmgt.RoleAuths;
 
 
-namespace MyFirstAbp.SysRoles
+namespace MyFirstAbp.CRM.SysRoles
 {
 
     public class SysRoleService : ApplicationService, ISysRoleService

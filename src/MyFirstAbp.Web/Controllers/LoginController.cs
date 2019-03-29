@@ -1,13 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MyFirstAbp.Persons;
+﻿ using Microsoft.AspNetCore.Mvc;
+using MyFirstAbp.Login;
+using MyFirstAbp.Login.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace MyFirstAbp.Web.Controllers
 {
-    [Route("api/user")]
+    [Route("api/users")]
     public class LoginController : MyFirstAbpControllerBase
     {
         private ILoginService _loginService;
@@ -15,59 +17,54 @@ namespace MyFirstAbp.Web.Controllers
         {
             _loginService = loginService;
         }
-        //查询验证
+
         [HttpGet]
         [Route("login")]
-        public String Login(string name, string pwd)
-        {
-
-            string result;
-            result = _loginService.Login(name, pwd);
-
-            return result;
-        }
-
-
-
-        //删除用户
-        [HttpDelete]
-        [Route("delete_user")]
-        public bool delete_user(int id)
-        {
-            
-            bool result = false;
-            result = _loginService.delete_user(id);
-
-            return result;
+        public LoginOutput login(LoginInput input) {
+            var output = _loginService.Login(input);
+            return output;
         }
 
 
 
 
-        //添加用户
-        [HttpPost]
-        [Route("add_user")]
-        public bool add_user(string name, string pwd)
-        {
-            bool result = false;
-            result = _loginService.add_user(name, pwd);
-            return result;
-        }
+        //查询验证
+        //[HttpGet]
+        //[Route("login")]
+        //public String Login(string name, string pwd)
+        //{
 
+        //    string result;
+        //    result = _loginService.Login(name, pwd);
 
-
-
-
-        //修改用户
-        [HttpPut]
-        [Route("update_user")]
-        public string update_user(int  id, string username)
-        {
-            string end_name;
-            end_name = _loginService.update_user(id, username);
-            return end_name;
-        }
-
-
+        //    return result;
+        //}
+        ////删除用户
+        //[HttpDelete]
+        //[Route("delete_user")]
+        //public bool delete_user(int id)
+        //{
+        //    bool result = false;
+        //    result = _loginService.delete_user(id);
+        //    return result;
+        //}
+        ////添加用户
+        //[HttpPost]
+        //[Route("add_user")]
+        //public bool add_user(string name, string pwd)
+        //{
+        //    bool result = false;
+        //    result = _loginService.add_user(name, pwd);
+        //    return result;
+        //}
+        ////修改用户
+        //[HttpPut]
+        //[Route("update_user")]
+        //public string update_user(int  id, string username)
+        //{
+        //    string end_name;
+        //    end_name = _loginService.update_user(id, username);
+        //    return end_name;
+        //}
     }
 }

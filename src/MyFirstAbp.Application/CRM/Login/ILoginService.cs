@@ -1,11 +1,11 @@
 ﻿using Abp.Application.Services;
-using MyFirstAbp.Login.Dto;
+using MyFirstAbp.CRM.Login.Dto;
 
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyFirstAbp.Login
+namespace MyFirstAbp.CRM.Login
 {
     public interface ILoginService:IApplicationService
     {

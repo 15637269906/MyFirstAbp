@@ -1,12 +1,13 @@
 ﻿using Abp.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MyFirstAbp.Pmgt.Auths;
+using MyFirstAbp.Pmgt.RoleAuths;
+using MyFirstAbp.Pmgt.SysRoles;
+using MyFirstAbp.Pmgt.UserInfos;
+using MyFirstAbp.Pmgt.UserRoles;
 using MyFirstAbp.Roles;
 using MyFirstAbp.Users;
-using MyFirstAbp.Auths;
-using MyFirstAbp.RoleAuths;
-using MyFirstAbp.SysRoles;
-using MyFirstAbp.UserInfos;
-using MyFirstAbp.UserRoles;
+
 
 namespace MyFirstAbp.EntityFrameworkCore
 {

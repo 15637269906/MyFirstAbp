@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyFirstAbp.RoleAuths
+namespace MyFirstAbp.Pmgt.RoleAuths
 {
     public class RoleAuth : Entity<int>
     {

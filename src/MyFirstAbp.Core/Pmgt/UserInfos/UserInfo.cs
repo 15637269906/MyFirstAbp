@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyFirstAbp.UserInfos
+namespace MyFirstAbp.Pmgt.UserInfos
 {
    public  class UserInfo:Entity<int>
     {
