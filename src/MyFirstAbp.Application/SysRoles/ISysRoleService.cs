@@ -15,5 +15,14 @@ namespace MyFirstAbp.SysRoles
 
         PagedResultDto<RolePageListDto> GetRolePageList(GetRolePageListInput input);
 
+
+        AddRolesOutput UpdateSysRole(UpdateSysRoleInput input);
+
+
+
+
+
+
+
     }
 }

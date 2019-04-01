@@ -7,7 +7,7 @@ using Abp.Domain.Repositories;
 using AutoMapper;
 using MyFirstAbp.Pmgt.Auths;
 using MyFirstAbp.Auths;
-
+using System.Linq;
 
 namespace MyFirstAbp.Auths
 {

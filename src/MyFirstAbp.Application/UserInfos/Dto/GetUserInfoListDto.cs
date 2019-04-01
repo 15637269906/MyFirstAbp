@@ -12,7 +12,7 @@ namespace MyFirstAbp.UserInfos.Dto
         public int Id { set; get; }
             public string Name { set; get; }
         public string Email { set; get; }
-        public int LoginAccount { set; get; }
+        public string LoginAccount { set; get; }
         public DateTime LastLoginDate { set; get; }
         public int[] Roles { set; get; }
         public int Status { set; get; }

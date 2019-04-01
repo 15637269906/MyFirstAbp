@@ -54,10 +54,19 @@ namespace MyFirstAbp.SysRoles
             return addRolesOutput;
         }
 
+
+
         public void DeleteRoles(int id)
         {
+
             _sysRoleRepository.Delete(id);
+
         }
+
+
+
+
+
 
         public PagedResultDto<RolePageListDto> GetRolePageList(GetRolePageListInput input)
         {
@@ -94,6 +103,29 @@ namespace MyFirstAbp.SysRoles
             return new PagedResultDto<RolePageListDto>(list_count, end_list);
         }
 
+        public AddRolesOutput UpdateSysRole(UpdateSysRoleInput input)
+        {
+            var SysRole = _sysRoleRepository.FirstOrDefault(p => p.Id == input.id);
+            SysRole.Name = input.name;
+            var auths_array = input.auths;
+            _roleAuthRepository.Delete(o => o.RoleId == input.id);
+            foreach (var auth in auths_array)
+            {
+                _roleAuthRepository.Insert(new RoleAuth
+                {
+                    RoleId = input.id,
+                    AuthId = auth
+                });
+            }
 
+            var auth_list = (from a in _authRepository.GetAll()
+                             where auths_array.Contains(a.Id)
+                             select a
+                           ).ToList();
+            var auth_dto_list = Mapper.Map<List<Auth>,List<AuthDto>>(auth_list);
+
+           
+            return new AddRolesOutput { Id = input.id, Name = SysRole.Name, Auths = auth_dto_list.ToArray() };
+        }
     }
 }

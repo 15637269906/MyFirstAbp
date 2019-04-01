@@ -2,6 +2,7 @@
 using MyFirstAbp.Auths;
 
 using MyFirstAbp.Auths.Dto;
+using MyFirstAbp.Pmgt.SysRoles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,5 +25,11 @@ namespace MyFirstAbp.Web.Controllers
             GetAllAuthsOutput s = _IAuthService.GetAllAuths();
             return s;
             }
+
+ 
+
+
+
+
     }
 }

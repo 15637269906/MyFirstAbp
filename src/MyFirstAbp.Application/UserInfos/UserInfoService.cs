@@ -36,8 +36,11 @@ namespace MyFirstAbp.UserInfos
 
         public PagedResultDto<GetUserInfoListDto> GetUserInfoLIst(GetUserInfoListInput input)
         {
-            var user_all_list = _userRepository.GetAllList();
+            var user_all_list = _userRepository.GetAll().ToList();
+
             var auth_dto_list = Mapper.Map<List<UserInfo>, List<GetUserInfoListDto>>(user_all_list);
+
+
             foreach (var a in auth_dto_list) {
                 var user_role_ids = (from ur in _userRoleRepository.GetAll()
                                      where ur.UserId == a.Id
@@ -97,11 +100,6 @@ namespace MyFirstAbp.UserInfos
                 }
             }
             return new AddUserInfoOutput {id= user_id,name=input.name,email=input.email, loginAccount=input.loginAccount,roles=input.roles };
-
-
-
-
-
 
         }
 

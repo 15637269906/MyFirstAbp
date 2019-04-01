@@ -36,6 +36,16 @@ namespace MyFirstAbp.Web.Controllers
             var result = _ISysRoleService.GetRolePageList(input);
             return result;
         }
+        [HttpPut]
+        [Route("UpdateSysRole")]
+
+        public AddRolesOutput UpdateSysRole(UpdateSysRoleInput input){
+            var result = _ISysRoleService.UpdateSysRole(input);
+            return result;
+        }
+
 
     }
+
+
 }
