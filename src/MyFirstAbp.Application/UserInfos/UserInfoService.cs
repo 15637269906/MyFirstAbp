@@ -160,8 +160,14 @@ namespace MyFirstAbp.UserInfos
 
 
        public  void DeleteUserInfo(int id) {
+            _userRoleRepository.Delete(o => o.UserId == id);
+
             _userRepository.Delete(o => o.Id == id);
         }
+
+
+
+
 
         public string Frozen(int id,bool enable) {
             if (enable)

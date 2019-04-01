@@ -58,7 +58,7 @@ namespace MyFirstAbp.SysRoles
 
         public void DeleteRoles(int id)
         {
-
+            _roleAuthRepository.Delete(o => o.RoleId == id);
             _sysRoleRepository.Delete(id);
 
         }
